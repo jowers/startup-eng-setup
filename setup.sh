@@ -15,8 +15,8 @@ nvm use v0.10.12
 # install heroku
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 heroku login
-ssh-keygen -t rsa
-heroku keys:add
+#ssh-keygen -t rsa
+#heroku keys:add
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
@@ -41,10 +41,10 @@ if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d~
 fi
 git clone https://github.com/jowers/startup-eng-dotfiles.git
-ln -sb dotfiles/.screenrc .
-ln -sb dotfiles/.bash_profile .
-ln -sb dotfiles/.bashrc .
-ln -sb dotfiles/.bashrc_custom .
-ln -sf dotfiles/.emacs.d .
-ln -sb dotfiles/.vimrc .
+ln -sb startup-eng-dotfiles/.screenrc .
+ln -sb startup-eng-dotfiles/.bash_profile .
+ln -sb startup-eng-dotfiles/.bashrc .
+ln -sb startup-eng-dotfiles/.bashrc_custom .
+ln -sf startup-eng-dotfiles/.emacs.d .
+ln -sb startup-eng-dotfiles/.vimrc .
 
